@@ -20,7 +20,7 @@ const Login = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(LoginDetails),
       };
-      const response = await fetch("http://127.0.0.1:5000/login", options);
+      const response = await fetch("https://sign-up-and-login-using-flask-mongodb.onrender.com/login", options);
       const parsedResponse = await response.json();
       if (response.ok) {
         Cookies.set("jwt-token", parsedResponse.token);
