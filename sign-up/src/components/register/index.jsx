@@ -23,7 +23,7 @@ const Register = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userData),
         };
-        const response = await fetch("http://127.0.0.1:5000/signup", options);
+        const response = await fetch("https://sign-up-and-login-using-flask-mongodb.onrender.com/signup", options);
         if (response.ok) {
           navigate("/login");
         }
